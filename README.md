@@ -50,7 +50,16 @@ sudo service apache2 start
 sudo service apache2 status
 ```
 ### NGINX
-####
+#### Iniciar el NGINX
+```
+sudo systemctl start nginx
+```
+#### Revisar el estado del servidor
+```
+sudo systemctl status nginx
+```
+
+Dentro del Github se encuentra la configuración del archivo default, mediante el cual se realizan las conexiones entre los servicios.
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
