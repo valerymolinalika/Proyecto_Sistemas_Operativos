@@ -8,12 +8,17 @@ server{
     server_name 192.168.56.102;
 #Configuración de las rutas
     location / {
+        #Ruta donde se ejecuta la pagina creada 
         proxy_pass http://192.168.56.102:3000/ ;
     }
         location /compose/ {
+        
+        #Ruta con el IP del slave1, en el cual se ejecuta el docker-compose
         proxy_pass http://192.168.56.103:8000/ ;
     }
         location /apache/ {
+        
+        #Ruta con el IP del slave2, en el cual se ejecuta el apache
         proxy_pass http://192.168.56.104/ ;
     }
 }
