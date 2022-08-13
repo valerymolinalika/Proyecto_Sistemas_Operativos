@@ -1,1 +1,1 @@
-# Proyecto_Sistemas_Operativos
+# Proyecto Sistemas Operativos
