@@ -1,0 +1,19 @@
+#Configuración del Nginx
+
+#Configuracion del servidor
+server{
+#Configuración de puertos
+    listen 80 default_server;
+
+    server_name 192.168.56.102;
+#Configuración de las rutas
+    location / {
+        proxy_pass http://192.168.56.102:3000/ ;
+    }
+        location /compose/ {
+        proxy_pass http://192.168.56.103:8000/ ;
+    }
+        location /apache/ {
+        proxy_pass http://192.168.56.104/ ;
+    }
+}
